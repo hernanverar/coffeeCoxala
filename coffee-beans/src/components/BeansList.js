@@ -1,13 +1,13 @@
 import React from 'react';
 import Beans from './Beans';
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 function BeansList(props) {
   return (
     <React.Fragment>
-        {props.beansListList.map((beans) =>
+        {props.beansList.map((beans) =>
       <Beans 
-        whenFlavorClicked = { props.onBeansSelection }
+        whenBeansClicked = { props.onBeansSelection }
         whenSellClicked = { props.onSell }
         name={beans.name}
         price={beans.price}
@@ -18,7 +18,13 @@ function BeansList(props) {
         key={beans.id}/>
     )}
     </React.Fragment>
-  )
+  );
 }
+
+// BeansList.propTypes = {
+//   beansList: PropTypesroTypes.array,
+//   onBeansSelection: PropTypes.func,
+//   onSell: PropTypes.func,
+// };
 
 export default BeansList
