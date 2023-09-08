@@ -6,4 +6,12 @@ function Beans(props) {
   )
 }
 
+Beans.propTypes = {
+  name: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  description: PropTypes.description.isRequired,
+  type: PropTypes.type.isRequired,
+  quantity: PropTypes.quantity.isRequired,
+  id: PropTypes.string,
+};
 export default Beans
