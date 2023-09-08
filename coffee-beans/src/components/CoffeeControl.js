@@ -1,5 +1,6 @@
+
 import PropTypes from "prop-types";
-import PropTypes from "prop-types";
+import BeansList from './BeansList';
 
 class CoffeeControl extends React.Component {
 
@@ -26,5 +27,11 @@ class CoffeeControl extends React.Component {
       }));
     }
   }
-}
+
+  }
+
+// CoffeeControl.prototype = {
+//   beans: PropTypes.object.
+// };
+
   export default CoffeeControl;
