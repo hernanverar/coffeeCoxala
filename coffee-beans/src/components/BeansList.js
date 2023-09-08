@@ -1,6 +1,6 @@
 import React from 'react';
 import Beans from './Beans';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 function BeansList(props) {
   return (
@@ -21,10 +21,10 @@ function BeansList(props) {
   );
 }
 
-// BeansList.propTypes = {
-//   beansList: PropTypesroTypes.array,
-//   onBeansSelection: PropTypes.func,
-//   onSell: PropTypes.func,
-// };
+BeansList.propTypes = {
+  beansList: PropTypes.array,
+  onBeansSelection: PropTypes.func,
+  onSell: PropTypes.func,
+};
 
 export default BeansList

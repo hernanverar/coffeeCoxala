@@ -1,6 +1,9 @@
-
+import React from 'react';
+import BeansList from "./BeansList";
+import BeansDetail from "./BeansDetail";
 import PropTypes from "prop-types";
-import BeansList from './BeansList';
+import EditBeanForm from './EditBeanForm';
+
 
 class CoffeeControl extends React.Component {
 
@@ -28,10 +31,36 @@ class CoffeeControl extends React.Component {
     }
   }
 
+  render() {
+    let currentlyVisibleState = null;
+    let buttonText = null;
+    if (this.state.editing ) {      
+      currentlyVisibleState = <EditBeanForm beans = {this.state.selectedBeans} onEditBeans = {this.handleEditingFBeansInList} />
+      buttonText = "Return to beans List";
+    }
+    else if (this.state.selectedBeans != null) {
+      currentlyVisibleState = <BeansDetail beans = {this.state.selectedBeans} onClickingEdit={this.handleEditClick}/>
+      buttonText = "Return to beans List";
+    }
+      
+    else {
+      currentlyVisibleState = <BeansList beansList={this.state.mainBeansList} 
+      onBeansSelection={this.handleChangingSelectedBeans} 
+      onSell={this.sell}
+      onClickingEdit = {this.handleEditClick}  />;
+      buttonText = "Add Beans";
+    }
+    return (
+      <React.Fragment>
+        {currentlyVisibleState}
+        <button onClick={this.handleClick}>{buttonText}</button>
+        </React.Fragment>
+    );
   }
+}
 
-// CoffeeControl.prototype = {
-//   beans: PropTypes.object.
-// };
+CoffeeControl.propTypes = {
+  beans: PropTypes.object.isRequired
+};
 
-  export default CoffeeControl;
+export default CoffeeControl;
