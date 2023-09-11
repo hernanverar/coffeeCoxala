@@ -10,7 +10,7 @@ function Beans(props) {
           <p>Left in stock: {props.quantity} pints</p>
           <hr />
         </div>
-        <button onClick={() => props.whenSellClicked(props.id)} type="submit">Sell one Pint</button><span>   </span>
+        <button onClick={() => props.whenSellClicked(props.id)} type="submit">Sell Quantity enter</button><span>   </span>
 
       </React.Fragment>
     );
