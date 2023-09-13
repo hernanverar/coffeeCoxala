@@ -14,6 +14,7 @@
 
 1. Clone this repo. https://github.com/hernanverar/coffeeCoxala.git
 2. Open the terminal and navigate to this project's production directory called "coffee-beans".
+3. The use 'npm run install' to add the packages need it
 
 ## Technologies Used
 
@@ -25,8 +26,8 @@
 In the project directory, you can run:
 
 
-## `npm install
-`
+### `npm install`
+
 
 ### `npm start`
 
