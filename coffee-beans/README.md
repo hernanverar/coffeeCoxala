@@ -7,6 +7,8 @@
 
 * Coxala Coffee is a React app build for coffee vendors to track inventory as they sold coffee beans. Also client's can add different type of roast.
 
+![Coxala Coffee](images/url_Coxala-Coffee.jpg)
+
 
 ## SetUp/Installation Req's:
 

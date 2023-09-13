@@ -2,7 +2,6 @@ import React from 'react';
 import BeansList from "./BeansList";
 import BeansDetail from "./BeansDetail";
 import NewRoastForm from './NewRoastForm';
-import PropTypes from "prop-types";
 import EditBeanForm from './EditBeanForm';
 
 
@@ -74,7 +73,7 @@ class CoffeeControl extends React.Component {
     let currentlyVisibleState = null;
     let buttonText = null;
     if (this.state.editing ) {      
-      currentlyVisibleState = <EditBeanForm beans = {this.state.selectedBeans} onEditBeans = {this.handleEditingFBeansInList} />
+      currentlyVisibleState = <EditBeanForm beans = {this.state.selectedBeans} onEditBeans = {this.handleEditingBeansInList} />
       buttonText = "Return to beans List";
     }
     else if (this.state.selectedBeans != null) {
@@ -102,8 +101,5 @@ class CoffeeControl extends React.Component {
   }
 }
 
-CoffeeControl.propTypes = {
-  beans: PropTypes.object.isRequired
-};
 
 export default CoffeeControl;
